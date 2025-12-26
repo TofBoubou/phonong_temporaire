@@ -1,26 +1,139 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Couleurs Reconquete */
+  --bleu-marine: #0D1B4C;
+  --rouge: #E30613;
+  --blanc: #FFFFFF;
+  --cyan: #00B4D8;
+  --or: #D4AF37;
+
+  /* Variantes */
+  --bleu-clair: #1a2d6b;
+  --rouge-fonce: #b8050f;
+  --gris-clair: #f5f5f5;
+  --gris-border: #e5e7eb;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bleu-marine: var(--bleu-marine);
+  --color-rouge: var(--rouge);
+  --color-cyan: var(--cyan);
+  --color-or: var(--or);
+  --color-bleu-clair: var(--bleu-clair);
+  --color-rouge-fonce: var(--rouge-fonce);
+  --color-gris-clair: var(--gris-clair);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--bleu-marine);
+  background-color: var(--gris-clair);
+  min-height: 100vh;
+}
+
+/* Boutons style Reconquete */
+.btn-primary {
+  background-color: var(--rouge);
+  color: var(--blanc);
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--rouge-fonce);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Cards */
+.card {
+  background: var(--blanc);
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(13, 27, 76, 0.1);
+  padding: 1.5rem;
+}
+
+/* Input styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--gris-border);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: var(--blanc);
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--bleu-marine);
+  box-shadow: 0 0 0 3px rgba(13, 27, 76, 0.1);
+}
+
+/* Radio buttons style card */
+.radio-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 2px solid var(--gris-border);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.radio-card:hover {
+  border-color: var(--bleu-marine);
+  background-color: rgba(13, 27, 76, 0.02);
+}
+
+.radio-card.selected {
+  border-color: var(--bleu-marine);
+  background-color: rgba(13, 27, 76, 0.05);
+}
+
+/* Feature cards */
+.feature-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(13, 27, 76, 0.03);
+  border-radius: 0.5rem;
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* Info box */
+.info-box {
+  background-color: #dbeafe;
+  border: 1px solid #3b82f6;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: #1e40af;
 }
