@@ -3,8 +3,8 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Rejoignez l'armée des phoners | Reconquête Paris 2026",
-  description: "Devenez phoner pour Reconquête Paris 2026. 30 minutes depuis chez vous suffisent pour faire la différence.",
+  title: "Rejoignez l'armée des phoners | Sarah Knafo Paris 2026",
+  description: "Devenez phoner pour Sarah Knafo Paris 2026. 30 minutes depuis chez vous suffisent pour faire la différence.",
 };
 
 export default function RootLayout({

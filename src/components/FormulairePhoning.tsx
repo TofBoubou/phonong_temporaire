@@ -37,13 +37,13 @@ export default function FormulairePhoning() {
 
   const validateForm = (): { valid: boolean; fieldId?: string; message?: string } => {
     if (!formData.prenom.trim()) {
-      return { valid: false, fieldId: 'field-prenom', message: 'Le prenom est obligatoire' };
+      return { valid: false, fieldId: 'field-prenom', message: 'Le prénom est obligatoire' };
     }
     if (!formData.nom.trim()) {
       return { valid: false, fieldId: 'field-nom', message: 'Le nom est obligatoire' };
     }
     if (!formData.mobile.trim()) {
-      return { valid: false, fieldId: 'field-mobile', message: 'Le numero de mobile est obligatoire' };
+      return { valid: false, fieldId: 'field-mobile', message: 'Le numéro de mobile est obligatoire' };
     }
     if (!formData.email.trim()) {
       return { valid: false, fieldId: 'field-email', message: 'L\'email est obligatoire' };
@@ -58,10 +58,10 @@ export default function FormulairePhoning() {
       return { valid: false, fieldId: 'field-code_postal', message: 'Le code postal est obligatoire' };
     }
     if (!formData.disponibilite) {
-      return { valid: false, fieldId: 'field-disponibilite', message: 'Veuillez indiquer votre disponibilite' };
+      return { valid: false, fieldId: 'field-disponibilite', message: 'Veuillez indiquer votre disponibilité' };
     }
     if (!formData.experience) {
-      return { valid: false, fieldId: 'field-experience', message: 'Veuillez indiquer votre experience' };
+      return { valid: false, fieldId: 'field-experience', message: 'Veuillez indiquer votre expérience' };
     }
     return { valid: true };
   };
@@ -109,7 +109,7 @@ export default function FormulairePhoning() {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-2xl md:text-3xl font-bold text-[#0D1B4C] mb-2">
-            <span className="text-[#0D1B4C]">Reconquete </span>
+            <span className="text-[#0D1B4C]">Sarah Knafo </span>
             <span className="text-[#E30613]">Paris 2026</span>
           </h1>
           <p className="text-gray-600 text-lg font-medium">Je phone</p>
@@ -118,39 +118,39 @@ export default function FormulairePhoning() {
         {/* Intro */}
         <div className="card mb-6">
           <p className="text-gray-700 mb-4">
-            Meme si vous n&apos;habitez pas a Paris, aidez-nous a convaincre la capitale !
+            Même si vous n&apos;habitez pas à Paris, aidez-nous à convaincre la capitale !
           </p>
           <h2 className="text-xl font-bold text-[#0D1B4C] mb-4">
-            Rejoignez notre armee de phoners ! 30 minutes depuis chez vous suffisent pour faire la difference.
+            Rejoignez notre armée de phoners ! 30 minutes depuis chez vous suffisent pour faire la différence.
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="feature-card">
-              <span className="feature-icon">&#127968;</span>
+              <span className="feature-icon">&#10003;</span>
               <div>
                 <p className="font-semibold text-[#0D1B4C]">Depuis chez vous</p>
-                <p className="text-sm text-gray-600">Pas besoin de vous deplacer, phonez ou que vous soyez en France</p>
+                <p className="text-sm text-gray-600">Pas besoin de vous déplacer, phonez où que vous soyez en France</p>
               </div>
             </div>
             <div className="feature-card">
-              <span className="feature-icon">&#9201;</span>
+              <span className="feature-icon">&#10003;</span>
               <div>
                 <p className="font-semibold text-[#0D1B4C]">30 min suffisent</p>
                 <p className="text-sm text-gray-600">Donnez le temps que vous pouvez, chaque appel compte</p>
               </div>
             </div>
             <div className="feature-card">
-              <span className="feature-icon">&#127891;</span>
+              <span className="feature-icon">&#10003;</span>
               <div>
-                <p className="font-semibold text-[#0D1B4C]">Vous serez forme</p>
+                <p className="font-semibold text-[#0D1B4C]">Vous serez formé</p>
                 <p className="text-sm text-gray-600">On vous accompagne avec des scripts et des arguments</p>
               </div>
             </div>
             <div className="feature-card">
-              <span className="feature-icon">&#129309;</span>
+              <span className="feature-icon">&#10003;</span>
               <div>
                 <p className="font-semibold text-[#0D1B4C]">Rejoignez un collectif</p>
-                <p className="text-sm text-gray-600">Faites partie de l&apos;armee des phoners pour Paris</p>
+                <p className="text-sm text-gray-600">Faites partie de l&apos;armée des phoners pour Paris</p>
               </div>
             </div>
           </div>
@@ -166,18 +166,18 @@ export default function FormulairePhoning() {
           )}
 
           <div className="space-y-6">
-            {/* Prenom & Nom */}
+            {/* Prénom & Nom */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Prenom *
+                  Prénom *
                 </label>
                 <input
                   id="field-prenom"
                   type="text"
                   value={formData.prenom}
                   onChange={(e) => updateFormData({ prenom: e.target.value })}
-                  placeholder="Votre prenom"
+                  placeholder="Votre prénom"
                   required
                 />
               </div>
@@ -256,10 +256,10 @@ export default function FormulairePhoning() {
               </div>
             </div>
 
-            {/* Disponibilite */}
+            {/* Disponibilité */}
             <div id="field-disponibilite">
               <label className="block text-sm font-medium text-gray-700 mb-3">
-                Disponibilite *
+                Disponibilité *
               </label>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                 <label
@@ -304,10 +304,10 @@ export default function FormulairePhoning() {
               </div>
             </div>
 
-            {/* Experience phoning */}
+            {/* Expérience phoning */}
             <div id="field-experience">
               <label className="block text-sm font-medium text-gray-700 mb-3">
-                Experience phoning *
+                Expérience phoning *
               </label>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <label
@@ -321,7 +321,7 @@ export default function FormulairePhoning() {
                       <div className="w-3 h-3 rounded-full bg-[#0D1B4C]" />
                     )}
                   </div>
-                  <span>Deja fait</span>
+                  <span>Déjà fait</span>
                 </label>
                 <label
                   className={`radio-card ${formData.experience === 'jamais_mais_motive' ? 'selected' : ''}`}
@@ -334,7 +334,7 @@ export default function FormulairePhoning() {
                       <div className="w-3 h-3 rounded-full bg-[#0D1B4C]" />
                     )}
                   </div>
-                  <span>Jamais fait mais motive</span>
+                  <span>Jamais fait mais motivé</span>
                 </label>
               </div>
             </div>
@@ -354,14 +354,14 @@ export default function FormulairePhoning() {
               disabled={isSubmitting}
               className="btn-primary w-full"
             >
-              {isSubmitting ? 'Envoi en cours...' : 'Je rejoins l\'armee des phoners'}
+              {isSubmitting ? 'Envoi en cours...' : 'Je rejoins l\'armée des phoners'}
             </button>
           </div>
         </div>
 
         {/* Footer */}
         <p className="text-center text-gray-400 text-xs mt-8">
-          Vos informations sont traitees par l&apos;equipe de campagne Reconquete Paris 2026.
+          Vos informations sont traitées par l&apos;équipe de campagne Sarah Knafo Paris 2026.
         </p>
       </div>
     </div>
