@@ -3,13 +3,20 @@ import { createClient } from '@supabase/supabase-js';
 import { appendToSheet, initializeSheetHeaders } from '@/lib/googleSheets';
 import { PhoningFormData } from '@/types/phoning';
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-);
+function getSupabase() {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+  if (!supabaseUrl || !supabaseAnonKey) {
+    throw new Error('Supabase configuration missing');
+  }
+
+  return createClient(supabaseUrl, supabaseAnonKey);
+}
 
 export async function POST(request: NextRequest) {
   try {
+    const supabase = getSupabase();
     const formData: PhoningFormData = await request.json();
 
     // Validation basique
