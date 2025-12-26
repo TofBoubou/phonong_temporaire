@@ -11,6 +11,10 @@ async function getAuthClient() {
   // En production (Vercel), utiliser la variable d'environnement
   if (process.env.GOOGLE_CREDENTIALS) {
     credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS);
+    // Fix pour Vercel qui escape les \n
+    if (credentials.private_key) {
+      credentials.private_key = credentials.private_key.replace(/\\n/g, '\n');
+    }
   } else {
     // En developpement local, utiliser le fichier
     const credentialsPath = path.join(process.cwd(), 'google-credentials.json');
