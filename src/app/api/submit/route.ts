@@ -22,14 +22,14 @@ export async function POST(request: NextRequest) {
     // Validation basique
     if (!formData.prenom || !formData.nom || !formData.email || !formData.mobile) {
       return NextResponse.json(
-        { error: 'Prenom, nom, email et mobile sont obligatoires' },
+        { error: 'Prénom, nom, email et mobile sont obligatoires' },
         { status: 400 }
       );
     }
 
     if (!formData.disponibilite || !formData.experience) {
       return NextResponse.json(
-        { error: 'Disponibilite et experience sont obligatoires' },
+        { error: 'Disponibilité et expérience sont obligatoires' },
         { status: 400 }
       );
     }
@@ -57,7 +57,7 @@ export async function POST(request: NextRequest) {
       // Verifier si c'est une erreur de doublon
       if (supabaseError.code === '23505' || supabaseError.message?.includes('unique') || supabaseError.message?.includes('duplicate')) {
         return NextResponse.json(
-          { error: 'Cette adresse email a deja ete utilisee.' },
+          { error: 'Cette adresse email a déjà été utilisée.' },
           { status: 409 }
         );
       }
