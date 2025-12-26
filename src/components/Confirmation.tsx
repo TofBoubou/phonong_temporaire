@@ -40,8 +40,8 @@ export default function Confirmation({ prenom }: Props) {
           {/* Logo */}
           <div className="mt-8 pt-6 border-t border-gray-100">
             <p className="font-bold">
-              <span className="text-[#0D1B4C]">Sarah Knafo </span>
-              <span className="text-[#E30613]">Paris 2026</span>
+              <span className="text-[#0D1B4C]">Municipales </span>
+              <span className="text-[#E30613]">Reconquête 2026</span>
             </p>
           </div>
         </div>

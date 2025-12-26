@@ -109,8 +109,8 @@ export default function FormulairePhoning() {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-2xl md:text-3xl font-bold text-[#0D1B4C] mb-2">
-            <span className="text-[#0D1B4C]">Sarah Knafo </span>
-            <span className="text-[#E30613]">Paris 2026</span>
+            <span className="text-[#0D1B4C]">Municipales </span>
+            <span className="text-[#E30613]">Reconquête 2026</span>
           </h1>
           <p className="text-gray-600 text-lg font-medium">Je phone</p>
         </div>
@@ -361,7 +361,7 @@ export default function FormulairePhoning() {
 
         {/* Footer */}
         <p className="text-center text-gray-400 text-xs mt-8">
-          Vos informations sont traitées par l&apos;équipe de campagne Sarah Knafo Paris 2026.
+          Vos informations sont traitées par l&apos;équipe de campagne Municipales Reconquête 2026.
         </p>
       </div>
     </div>
