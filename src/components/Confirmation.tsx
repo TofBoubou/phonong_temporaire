@@ -19,7 +19,7 @@ export default function Confirmation({ prenom }: Props) {
           </h1>
 
           <p className="text-gray-600 mb-6">
-            Vous avez rejoint l&apos;armée des phoners pour les municipales 2026.
+            Vous avez rejoint l&apos;armée des phoners pour les élections municipales 2026.
           </p>
 
           <div className="bg-gray-50 rounded-lg p-4 text-left mb-6">
