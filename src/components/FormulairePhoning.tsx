@@ -118,7 +118,7 @@ export default function FormulairePhoning() {
         {/* Intro */}
         <div className="card mb-6">
           <p className="text-gray-700 mb-4">
-            Même si vous n&apos;habitez pas à Paris, aidez-nous à convaincre.
+            Aidez-nous à convaincre pour les municipales !
           </p>
           <h2 className="text-xl font-bold text-[#0D1B4C] mb-4">
             Rejoignez notre armée de phoners ! 30 minutes depuis chez vous suffisent pour faire la différence.
